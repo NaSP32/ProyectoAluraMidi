@@ -1,14 +1,18 @@
 /*Creo una funcion para ejecutar un sonido*/
-function playSonidoPom (){
-    document.querySelector('#sonido_tecla_pom').play();
+function playSonido(idElementoAudio){
+    document.querySelector(idElementoAudio).play();
 
 }
 
 const listaDeTeclas = document.querySelectorAll('.tecla');
 
 let contador = 0
+
 while (contador < 9){
-    listaDeTeclas[contador].onClick = playSonidoPom; 
-    contador = contador+1
-    console.log('Vuelta'+ contador) 
+    listaDeTeclas[contador].onclick = function(){
+        playSonido('#sonido_tecla_psh');
+    }; 
+    contador = contador+1;
+    console.log('vuelta'+contador)
+  
 }
