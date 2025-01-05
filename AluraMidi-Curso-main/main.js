@@ -4,14 +4,11 @@ function playSonidoPom (){
 
 }
 
-document.querySelectorAll('.tecla')
+const listaDeTeclas = document.querySelectorAll('.tecla');
 
-/*Conecto el boton con el evento on clcik para que se ejecute 
-la f. cuando clickeo el boton*/
-//document.querySelector('.tecla_pom').onclick = playSonidoPom;
-
-/* //function playSonidoClap (){
-document.querySelector('#sonido_tecla_clap').play();
+let contador = 0
+while (contador < 9){
+    listaDeTeclas[contador].onClick = playSonidoPom; 
+    contador = contador+1
+    console.log('Vuelta'+ contador) 
 }
-
-document.querySelector('.tecla_clap').onclick = playSonidoClap; */
